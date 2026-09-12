@@ -1,0 +1,537 @@
+WEBVTT
+
+0
+00:00:05.550 --> 00:00:07.650
+We're now going to create the next
+
+1
+00:00:07.789 --> 00:00:08.859
+API request,
+
+2
+00:00:09.220 --> 00:00:10.649
+which is the decision.
+
+3
+00:00:11.180 --> 00:00:11.949
+So that was,
+
+4
+00:00:12.069 --> 00:00:13.989
+is going to be called the post-decision,
+
+5
+00:00:14.630 --> 00:00:18.469
+and that is where when the manager clicks on the approved button,
+
+6
+00:00:18.870 --> 00:00:22.469
+we need to write that information into the data table in Workato.
+
+7
+00:00:23.500 --> 00:00:25.170
+So we're going to create that recipe
+
+8
+00:00:25.629 --> 00:00:27.549
+and remember that data will be.
+
+9
+00:00:28.430 --> 00:00:30.250
+Updating this data table.
+
+10
+00:00:31.079 --> 00:00:32.200
+So let's go ahead and create that.
+
+11
+00:00:32.310 --> 00:00:33.490
+We're going to create a recipe.
+
+12
+00:00:34.939 --> 00:00:36.759
+And it's gonna be called the post decision.
+
+13
+00:00:42.959 --> 00:00:45.189
+And we're gonna build an API endpoint
+
+14
+00:00:45.290 --> 00:00:46.349
+and we're gonna start building.
+
+15
+00:00:50.840 --> 00:00:51.180
+Now,
+
+16
+00:00:51.389 --> 00:00:52.580
+unlike the previous
+
+17
+00:00:53.279 --> 00:00:54.099
+example,
+
+18
+00:00:54.360 --> 00:00:55.740
+we are getting
+
+19
+00:00:55.959 --> 00:00:57.619
+parameters in the request.
+
+20
+00:00:58.119 --> 00:00:58.799
+And so,
+
+21
+00:00:58.919 --> 00:01:00.220
+we need to
+
+22
+00:01:00.639 --> 00:01:02.119
+identify what the schema is.
+
+23
+00:01:02.200 --> 00:01:02.430
+So,
+
+24
+00:01:02.520 --> 00:01:04.209
+we'll click on use JSON.
+
+25
+00:01:09.569 --> 00:01:13.949
+And here we're going to get 3 items coming in in the request.
+
+26
+00:01:14.879 --> 00:01:16.360
+And it'll be the record ID,
+
+27
+00:01:16.550 --> 00:01:17.419
+the decision,
+
+28
+00:01:17.550 --> 00:01:19.660
+which is going to be approved,
+
+29
+00:01:20.239 --> 00:01:20.480
+uh,
+
+30
+00:01:20.599 --> 00:01:21.110
+or reject,
+
+31
+00:01:21.160 --> 00:01:22.559
+and then the approver email.
+
+32
+00:01:25.309 --> 00:01:26.750
+And we'll generate the schema.
+
+33
+00:01:27.069 --> 00:01:27.139
+So,
+
+34
+00:01:27.150 --> 00:01:28.599
+this is a big difference now
+
+35
+00:01:28.949 --> 00:01:31.410
+because we need to tell Rorcado
+
+36
+00:01:31.750 --> 00:01:34.470
+additional data is coming in and you'll need to do something with that.
+
+37
+00:01:35.690 --> 00:01:36.330
+And now,
+
+38
+00:01:36.410 --> 00:01:37.129
+just like we did before,
+
+39
+00:01:37.209 --> 00:01:41.050
+we need to configure the response for this API so we'll call this success.
+
+40
+00:01:42.769 --> 00:01:42.889
+Uh,
+
+41
+00:01:42.940 --> 00:01:44.400
+it's a standard response
+
+42
+00:01:44.860 --> 00:01:46.580
+and 200 OK.
+
+43
+00:01:47.019 --> 00:01:47.660
+And once again,
+
+44
+00:01:47.739 --> 00:01:48.870
+we'll need to add the JSON.
+
+45
+00:01:48.980 --> 00:01:51.449
+What are we going to send back the information?
+
+46
+00:01:51.500 --> 00:01:52.089
+What would it,
+
+47
+00:01:52.660 --> 00:01:53.809
+what the schema look like?
+
+48
+00:01:53.940 --> 00:01:54.139
+OK.
+
+49
+00:01:54.220 --> 00:01:56.620
+We'll have the record ID and the status.
+
+50
+00:01:58.000 --> 00:01:59.069
+And generate the schema.
+
+51
+00:02:00.080 --> 00:02:00.370
+OK,
+
+52
+00:02:00.519 --> 00:02:02.370
+so now we know that the recipe,
+
+53
+00:02:02.410 --> 00:02:03.589
+it's telling us
+
+54
+00:02:03.970 --> 00:02:04.769
+what to expect,
+
+55
+00:02:04.889 --> 00:02:06.129
+what are we gonna get,
+
+56
+00:02:06.449 --> 00:02:07.169
+and what
+
+57
+00:02:07.410 --> 00:02:08.850
+the output's going to look like.
+
+58
+00:02:09.970 --> 00:02:10.050
+Now,
+
+59
+00:02:10.130 --> 00:02:11.630
+we're gonna click on add step,
+
+60
+00:02:11.979 --> 00:02:13.289
+action in app.
+
+61
+00:02:13.759 --> 00:02:13.880
+Now,
+
+62
+00:02:13.960 --> 00:02:14.570
+what are we doing?
+
+63
+00:02:14.649 --> 00:02:17.759
+We're going to be updating the table in Workado.
+
+64
+00:02:17.929 --> 00:02:18.039
+So,
+
+65
+00:02:18.050 --> 00:02:20.110
+the Workado data table is going to be
+
+66
+00:02:20.729 --> 00:02:21.889
+updated with the decision.
+
+67
+00:02:22.710 --> 00:02:25.229
+Unlike the previous one where we used an array,
+
+68
+00:02:25.270 --> 00:02:26.190
+this is a flat file.
+
+69
+00:02:26.229 --> 00:02:28.389
+We're just gonna update a single record.
+
+70
+00:02:28.509 --> 00:02:28.630
+So,
+
+71
+00:02:28.910 --> 00:02:30.990
+update record is the correct item here.
+
+72
+00:02:31.750 --> 00:02:35.649
+We need to make sure we select the right table so computer request approval.
+
+73
+00:02:36.740 --> 00:02:39.960
+And we're going to uh use the record ID.
+
+74
+00:02:42.300 --> 00:02:43.009
+And
+
+75
+00:02:43.220 --> 00:02:44.960
+now we see here on the left,
+
+76
+00:02:45.059 --> 00:02:47.100
+we have the decision and the approval email.
+
+77
+00:02:47.179 --> 00:02:48.119
+We need to
+
+78
+00:02:48.500 --> 00:02:49.600
+map that.
+
+79
+00:02:53.610 --> 00:02:54.169
+So,
+
+80
+00:02:54.250 --> 00:02:56.270
+we get those now listed here.
+
+81
+00:02:57.399 --> 00:02:59.460
+So we have the rover email.
+
+82
+00:03:00.679 --> 00:03:02.740
+And the most important one is the decision.
+
+83
+00:03:03.039 --> 00:03:03.490
+Approve,
+
+84
+00:03:03.559 --> 00:03:04.160
+reject.
+
+85
+00:03:04.970 --> 00:03:05.279
+OK,
+
+86
+00:03:05.520 --> 00:03:08.940
+so we need to map the information that is coming in.
+
+87
+00:03:09.830 --> 00:03:11.110
+Through this API,
+
+88
+00:03:11.750 --> 00:03:13.770
+we need to map it to what are the.
+
+89
+00:03:15.160 --> 00:03:17.330
+Places in the data table stored by Worado,
+
+90
+00:03:18.850 --> 00:03:20.710
+so that it knows where to
+
+91
+00:03:21.050 --> 00:03:21.800
+update the record.
+
+92
+00:03:23.929 --> 00:03:24.080
+OK,
+
+93
+00:03:24.119 --> 00:03:25.619
+and then the last piece.
+
+94
+00:03:26.520 --> 00:03:28.059
+We're going to do is
+
+95
+00:03:28.279 --> 00:03:31.839
+actually action an app and then API platform by Worcado.
+
+96
+00:03:32.630 --> 00:03:34.139
+So we're going to respond
+
+97
+00:03:34.740 --> 00:03:35.949
+and it was a success,
+
+98
+00:03:36.039 --> 00:03:39.229
+and we only just used one and then we'll go ahead and uh
+
+99
+00:03:39.990 --> 00:03:40.669
+Apply.
+
+100
+00:03:41.380 --> 00:03:42.729
+To show all of these,
+
+101
+00:03:43.199 --> 00:03:43.449
+OK?
+
+102
+00:03:43.490 --> 00:03:46.490
+And we're going to show the record ID and the status.
+
+103
+00:03:46.570 --> 00:03:49.429
+We're going to send that back in the response body
+
+104
+00:03:49.820 --> 00:03:51.229
+back to the app on the iPhone.
+
+105
+00:03:52.649 --> 00:03:54.580
+And now we will save,
+
+106
+00:03:54.889 --> 00:03:57.009
+we have completed everything in this API.
+
+107
+00:03:57.300 --> 00:03:57.399
+So,
+
+108
+00:03:57.410 --> 00:03:58.839
+the first one's going to take the request,
+
+109
+00:03:58.850 --> 00:03:59.240
+and remember,
+
+110
+00:03:59.250 --> 00:03:59.809
+this is,
+
+111
+00:04:00.759 --> 00:04:01.710
+Getting a single record,
+
+112
+00:04:01.759 --> 00:04:02.600
+it's not an
+
+113
+00:04:03.220 --> 00:04:03.850
+array.
+
+114
+00:04:03.919 --> 00:04:06.779
+It's gonna get the information for which record to change.
+
+115
+00:04:07.240 --> 00:04:08.110
+We've mapped.
+
+116
+00:04:08.710 --> 00:04:09.679
+In the
+
+117
+00:04:10.380 --> 00:04:11.160
+Uh,
+
+118
+00:04:11.380 --> 00:04:12.320
+recipe here.
+
+119
+00:04:12.699 --> 00:04:13.860
+We're in the data table,
+
+120
+00:04:13.940 --> 00:04:15.320
+we're going to make the changes,
+
+121
+00:04:15.619 --> 00:04:20.380
+and then what are we gonna return back to in this API back to the app.
+
+122
+00:04:21.470 --> 00:04:23.049
+So we've clicked on save.
+
+123
+00:04:23.200 --> 00:04:24.619
+I'm going to exit
+
+124
+00:04:24.839 --> 00:04:25.640
+the editing.
+
+125
+00:04:26.339 --> 00:04:28.329
+And then I'm going to go back to,
+
+126
+00:04:29.140 --> 00:04:30.519
+Our project
+
+127
+00:04:30.820 --> 00:04:33.059
+and we see here now we have the post decision.
+
+128
+00:04:33.179 --> 00:04:33.600
+So,
+
+129
+00:04:34.140 --> 00:04:35.510
+we have the data table,
+
+130
+00:04:35.790 --> 00:04:39.579
+we have the pending request that gives us all the items that are pending,
+
+131
+00:04:39.899 --> 00:04:41.079
+and this is when the
+
+132
+00:04:41.500 --> 00:04:43.630
+manager clicks on the button approve.
+
+133
+00:04:43.980 --> 00:04:45.700
+This is the API that will be called.

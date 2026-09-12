@@ -1,0 +1,457 @@
+WEBVTT
+
+0
+00:00:09.909 --> 00:00:12.130
+Logged in to my account in WA.
+
+1
+00:00:12.449 --> 00:00:14.170
+It is a trial account.
+
+2
+00:00:14.510 --> 00:00:15.090
+I'm going
+
+3
+00:00:15.270 --> 00:00:18.239
+to use the organization tool projects.
+
+4
+00:00:18.629 --> 00:00:19.049
+So
+
+5
+00:00:19.200 --> 00:00:21.450
+I am in projects here
+
+6
+00:00:21.629 --> 00:00:24.069
+and you can also get it from the left navigation projects.
+
+7
+00:00:24.920 --> 00:00:25.719
+And
+
+8
+00:00:26.000 --> 00:00:28.479
+we are going to create a new project here,
+
+9
+00:00:28.639 --> 00:00:30.319
+so I'm gonna click on projects
+
+10
+00:00:30.639 --> 00:00:32.360
+and use the naming convention,
+
+11
+00:00:32.369 --> 00:00:34.380
+IT cause that's the department,
+
+12
+00:00:35.040 --> 00:00:36.619
+and this will be manager.
+
+13
+00:00:37.900 --> 00:00:38.930
+Computer.
+
+14
+00:00:40.900 --> 00:00:41.560
+Approval.
+
+15
+00:00:42.990 --> 00:00:45.529
+And we're gonna start from scratch and we're going to create
+
+16
+00:00:45.790 --> 00:00:46.189
+a
+
+17
+00:00:46.290 --> 00:00:47.310
+blank project.
+
+18
+00:00:47.470 --> 00:00:47.630
+So,
+
+19
+00:00:47.750 --> 00:00:48.770
+here's our project.
+
+20
+00:00:49.310 --> 00:00:52.930
+And the first step in our process is we're going to create
+
+21
+00:00:53.310 --> 00:00:54.330
+the data table,
+
+22
+00:00:54.750 --> 00:00:54.939
+uh,
+
+23
+00:00:54.950 --> 00:00:55.810
+the data store,
+
+24
+00:00:55.830 --> 00:00:57.450
+and that will represent
+
+25
+00:00:57.950 --> 00:01:00.650
+the data we're going to send to the
+
+26
+00:01:01.819 --> 00:01:02.029
+application.
+
+27
+00:01:02.139 --> 00:01:04.489
+This will contain the resources of
+
+28
+00:01:05.190 --> 00:01:08.230
+requests made and then eventually have the manager's approval
+
+29
+00:01:08.230 --> 00:01:10.069
+and the who met uh and the time.
+
+30
+00:01:10.819 --> 00:01:12.370
+So we're gonna create a data table.
+
+31
+00:01:13.489 --> 00:01:14.750
+And we'll give it a name.
+
+32
+00:01:15.209 --> 00:01:15.760
+And so,
+
+33
+00:01:15.769 --> 00:01:16.650
+this is like a database.
+
+34
+00:01:16.769 --> 00:01:17.849
+I'll use lowercase,
+
+35
+00:01:18.290 --> 00:01:19.029
+computer
+
+36
+00:01:20.089 --> 00:01:20.669
+request.
+
+37
+00:01:22.300 --> 00:01:22.959
+Approval.
+
+38
+00:01:24.559 --> 00:01:26.650
+And I could import a CSV,
+
+39
+00:01:26.760 --> 00:01:28.779
+but I'm gonna start from scratch.
+
+40
+00:01:30.379 --> 00:01:31.220
+And now,
+
+41
+00:01:31.379 --> 00:01:34.180
+there are some additional columns automatically created for you,
+
+42
+00:01:34.220 --> 00:01:34.739
+which you can,
+
+43
+00:01:34.819 --> 00:01:35.910
+we will be using
+
+44
+00:01:36.099 --> 00:01:37.760
+as a record ID which would be important.
+
+45
+00:01:38.339 --> 00:01:38.559
+Um,
+
+46
+00:01:38.580 --> 00:01:41.019
+there's a created time and a last time modified.
+
+47
+00:01:41.419 --> 00:01:41.500
+So,
+
+48
+00:01:41.519 --> 00:01:43.779
+we'll go ahead and add the column in here.
+
+49
+00:01:43.860 --> 00:01:44.680
+The first,
+
+50
+00:01:44.739 --> 00:01:45.330
+uh,
+
+51
+00:01:45.339 --> 00:01:45.959
+column
+
+52
+00:01:46.580 --> 00:01:48.639
+is going to be request your email.
+
+53
+00:01:54.080 --> 00:01:55.819
+And that will be short text.
+
+54
+00:01:59.529 --> 00:01:59.930
+OK.
+
+55
+00:02:00.580 --> 00:02:02.739
+And that will be required,
+
+56
+00:02:02.940 --> 00:02:04.110
+so we'll add that.
+
+57
+00:02:05.309 --> 00:02:05.480
+Well,
+
+58
+00:02:05.559 --> 00:02:07.050
+the next column,
+
+59
+00:02:07.120 --> 00:02:08.619
+which will be device.
+
+60
+00:02:10.738 --> 00:02:10.979
+Uh,
+
+61
+00:02:11.068 --> 00:02:12.119
+short text,
+
+62
+00:02:12.279 --> 00:02:12.858
+uh,
+
+63
+00:02:12.919 --> 00:02:13.759
+and that will be
+
+64
+00:02:13.988 --> 00:02:14.468
+what
+
+65
+00:02:14.869 --> 00:02:15.468
+type,
+
+66
+00:02:15.748 --> 00:02:16.639
+type of computer.
+
+67
+00:02:19.720 --> 00:02:19.729
+And
+
+68
+00:02:20.000 --> 00:02:21.179
+that will be required.
+
+69
+00:02:25.330 --> 00:02:27.050
+We will have the
+
+70
+00:02:27.490 --> 00:02:28.130
+cost.
+
+71
+00:02:30.380 --> 00:02:33.779
+And here we can go ahead and change that to decimal.
+
+72
+00:02:41.240 --> 00:02:43.759
+And then we will have reason.
+
+73
+00:02:45.419 --> 00:02:46.919
+Reason for the request.
+
+74
+00:02:47.380 --> 00:02:47.630
+So,
+
+75
+00:02:47.779 --> 00:02:48.309
+here,
+
+76
+00:02:48.740 --> 00:02:51.690
+we can say that the reasons could be new hire.
+
+77
+00:02:54.449 --> 00:02:55.000
+Uh,
+
+78
+00:02:55.289 --> 00:02:56.089
+broken.
+
+79
+00:02:57.970 --> 00:02:59.199
+Or lost.
+
+80
+00:03:00.380 --> 00:03:01.550
+I'll make that required.
+
+81
+00:03:02.649 --> 00:03:03.869
+We have the justification.
+
+82
+00:03:07.309 --> 00:03:08.259
+And why.
+
+83
+00:03:13.229 --> 00:03:14.649
+Do you need
+
+84
+00:03:14.910 --> 00:03:16.119
+a laptop,
+
+85
+00:03:17.869 --> 00:03:18.960
+A computer issued.
+
+86
+00:03:23.899 --> 00:03:24.839
+That required.
+
+87
+00:03:25.449 --> 00:03:26.699
+We'll have that column.
+
+88
+00:03:29.350 --> 00:03:30.320
+Status.
+
+89
+00:03:31.690 --> 00:03:33.050
+Will tell us what's
+
+90
+00:03:33.399 --> 00:03:35.020
+currently happening,
+
+91
+00:03:35.520 --> 00:03:37.220
+won't be a field people will fill.
+
+92
+00:03:39.240 --> 00:03:40.419
+Then we will have.
+
+93
+00:03:43.130 --> 00:03:44.089
+Approver
+
+94
+00:03:45.770 --> 00:03:46.479
+Email.
+
+95
+00:03:49.070 --> 00:03:52.899
+And then the last column will be decided that when the decision was made.
+
+96
+00:04:02.000 --> 00:04:03.669
+And we'll take time.
+
+97
+00:04:04.690 --> 00:04:06.610
+And at the column.
+
+98
+00:04:08.009 --> 00:04:09.110
+So now that we have a column,
+
+99
+00:04:09.149 --> 00:04:13.490
+we can go ahead and we can enter our data in here ourselves.
+
+100
+00:04:15.190 --> 00:04:15.199
+So
+
+101
+00:04:16.029 --> 00:04:22.089
+we have new.employeewk@gmail.com will be their email address.
+
+102
+00:04:25.359 --> 00:04:26.040
+Device,
+
+103
+00:04:26.160 --> 00:04:27.299
+we will say
+
+104
+00:04:28.000 --> 00:04:28.600
+Dell.
+
+105
+00:04:29.420 --> 00:04:30.100
+Yes,
+
+106
+00:04:30.220 --> 00:04:31.059
+15.
+
+107
+00:04:31.260 --> 00:04:32.799
+We'll see that costs
+
+108
+00:04:33.179 --> 00:04:36.299
+1899.99.
+
+109
+00:04:37.239 --> 00:04:38.450
+And we'll say new higher.
+
+110
+00:04:40.690 --> 00:04:41.329
+Uh,
+
+111
+00:04:41.489 --> 00:04:42.149
+just
+
+112
+00:04:42.690 --> 00:04:44.630
+joined the company.
+
+113
+00:04:47.220 --> 00:04:49.570
+We'll leave this here and then we'll put me,

@@ -1,0 +1,49 @@
+WEBVTT
+
+0
+00:00:00.529 --> 00:00:02.809
+Let's review what the purpose of the APIs and
+
+1
+00:00:02.809 --> 00:00:05.300
+how they use the data table stored in Workato.
+
+2
+00:00:05.650 --> 00:00:06.170
+To recap,
+
+3
+00:00:06.199 --> 00:00:09.189
+a manager's phone application pulls from the data table,
+
+4
+00:00:09.409 --> 00:00:10.489
+stored in Workato,
+
+5
+00:00:10.689 --> 00:00:15.140
+pending requests and sends this list and array to a mobile device.
+
+6
+00:00:15.569 --> 00:00:17.709
+The mobile device does not Send any data,
+
+7
+00:00:17.940 --> 00:00:21.200
+but the recipe hands what to send to the application on the phone.
+
+8
+00:00:21.629 --> 00:00:23.370
+Once a decision is made on the phone,
+
+9
+00:00:23.540 --> 00:00:26.920
+the post-decision API sends the record ID
+
+10
+00:00:27.059 --> 00:00:29.250
+and the approval status back to Workato,
+
+11
+00:00:29.459 --> 00:00:33.299
+which then updates the source record status to approved in the data table.

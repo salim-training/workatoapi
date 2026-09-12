@@ -1,0 +1,97 @@
+WEBVTT
+
+0
+00:00:00.490 --> 00:00:03.029
+To effectively configure your Workato automation,
+
+1
+00:00:03.410 --> 00:00:05.340
+begin by defining the structure of your data.
+
+2
+00:00:05.590 --> 00:00:08.170
+Creating a clear sample JSON payload is
+
+3
+00:00:08.170 --> 00:00:10.489
+the first essential step in building dynamic,
+
+4
+00:00:10.649 --> 00:00:12.630
+scalable API integrations.
+
+5
+00:00:12.970 --> 00:00:18.069
+Here we see a dataable named computer_request_approval.
+
+6
+00:00:18.170 --> 00:00:21.370
+It captures critical information like requester emails,
+
+7
+00:00:21.533 --> 00:00:22.482
+Device details,
+
+8
+00:00:22.732 --> 00:00:23.243
+costs,
+
+9
+00:00:23.413 --> 00:00:24.732
+and approval statuses,
+
+10
+00:00:24.933 --> 00:00:27.812
+all of which serve as the foundation for our JSON payload.
+
+11
+00:00:28.253 --> 00:00:30.572
+When mapping a single dataable road to JSON,
+
+12
+00:00:30.812 --> 00:00:33.592
+we create a flat structure that mirrors our column headers.
+
+13
+00:00:33.812 --> 00:00:36.693
+This ensures that every individual data point is
+
+14
+00:00:36.693 --> 00:00:39.752
+correctly represented and ready for API processing.
+
+15
+00:00:40.013 --> 00:00:42.533
+Since managers often need to review multiple requests.
+
+16
+00:00:42.655 --> 00:00:45.995
+At once we must upgrade our schema by wrapping our data
+
+17
+00:00:45.995 --> 00:00:49.495
+in a requests array and adding a record underscore ID.
+
+18
+00:00:49.736 --> 00:00:52.605
+We support batch operations and unique item tracking.
+
+19
+00:00:52.895 --> 00:00:53.316
+Finally,
+
+20
+00:00:53.616 --> 00:00:55.175
+bring your payload into work auto.
+
+21
+00:00:55.456 --> 00:00:58.335
+Use the paste JSON sample feature to automatically
+
+22
+00:00:58.335 --> 00:01:00.215
+generate your trigger schema and data pills,
+
+23
+00:01:00.416 --> 00:01:03.655
+instantly preparing your workflow to handle the dynamic data you've just defined.
