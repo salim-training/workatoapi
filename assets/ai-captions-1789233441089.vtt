@@ -1,0 +1,509 @@
+WEBVTT
+
+0
+00:00:09.850 --> 00:00:11.270
+Welcome to our lesson today.
+
+1
+00:00:11.329 --> 00:00:13.109
+I want to set the scene by starting off
+
+2
+00:00:13.770 --> 00:00:17.350
+by drawing a diagram to help you understand what the lesson plan is for today.
+
+3
+00:00:17.770 --> 00:00:19.809
+Drawing just helps me slow down my thoughts
+
+4
+00:00:19.809 --> 00:00:22.290
+and help us understand the context easier.
+
+5
+00:00:23.250 --> 00:00:24.120
+In our case,
+
+6
+00:00:24.329 --> 00:00:27.069
+overview is we're going to move the data
+
+7
+00:00:27.889 --> 00:00:29.139
+from a spreadsheet.
+
+8
+00:00:30.180 --> 00:00:32.439
+Or really a data table in Waikato
+
+9
+00:00:32.860 --> 00:00:35.799
+and get that over to a manager's cell phone.
+
+10
+00:00:36.860 --> 00:00:38.090
+To make a business decision.
+
+11
+00:00:39.509 --> 00:00:41.290
+So a very common one is
+
+12
+00:00:41.709 --> 00:00:42.869
+we have a new hire.
+
+13
+00:00:43.709 --> 00:00:47.619
+And these new hires have to have their laptop approved.
+
+14
+00:00:48.799 --> 00:00:49.040
+Uh,
+
+15
+00:00:49.049 --> 00:00:50.500
+by the hiring manager.
+
+16
+00:00:51.040 --> 00:00:51.520
+Oftentimes,
+
+17
+00:00:51.560 --> 00:00:52.909
+it's an email that gets sent,
+
+18
+00:00:52.959 --> 00:00:54.580
+but it often gets buried in their
+
+19
+00:00:55.099 --> 00:00:55.900
+mailbox,
+
+20
+00:00:56.000 --> 00:00:57.520
+and then there's a delay.
+
+21
+00:00:58.000 --> 00:00:58.110
+So,
+
+22
+00:00:58.119 --> 00:01:02.119
+what we're gonna do to make that function easier is we're going to build an iOS app
+
+23
+00:01:02.400 --> 00:01:05.160
+to make the approval function easier for the manager.
+
+24
+00:01:05.910 --> 00:01:06.589
+The data
+
+25
+00:01:06.870 --> 00:01:10.110
+and that data in this case is going to be who made the request,
+
+26
+00:01:10.349 --> 00:01:11.489
+what equipment,
+
+27
+00:01:11.830 --> 00:01:12.470
+uh,
+
+28
+00:01:12.709 --> 00:01:13.870
+what manager they are.
+
+29
+00:01:14.069 --> 00:01:15.290
+It'll be stored in a table,
+
+30
+00:01:15.709 --> 00:01:16.779
+which we see here,
+
+31
+00:01:16.870 --> 00:01:18.330
+we see here this table here,
+
+32
+00:01:18.669 --> 00:01:19.860
+and that will be stored in Ricado.
+
+33
+00:01:20.750 --> 00:01:21.790
+In a future video,
+
+34
+00:01:21.949 --> 00:01:25.550
+I will review how we can fetch data from other recruitment systems.
+
+35
+00:01:26.680 --> 00:01:28.220
+So the overall goal here
+
+36
+00:01:28.639 --> 00:01:30.529
+in our system is two parts.
+
+37
+00:01:30.959 --> 00:01:31.360
+One,
+
+38
+00:01:32.540 --> 00:01:36.120
+Showing how to use Worcado to to build this API function,
+
+39
+00:01:36.699 --> 00:01:37.300
+and 2,
+
+40
+00:01:37.430 --> 00:01:39.680
+to use quad code to build a user interface
+
+41
+00:01:39.680 --> 00:01:42.540
+for an iPhone that interacts with the Workado API.
+
+42
+00:01:43.389 --> 00:01:43.500
+So,
+
+43
+00:01:43.510 --> 00:01:44.250
+let me
+
+44
+00:01:44.550 --> 00:01:46.639
+begin by drawing the diagrams out.
+
+45
+00:01:47.069 --> 00:01:47.160
+So,
+
+46
+00:01:47.190 --> 00:01:48.769
+the first thing here we're gonna draw
+
+47
+00:01:49.029 --> 00:01:51.739
+is the data center for our,
+
+48
+00:01:52.069 --> 00:01:52.300
+uh,
+
+49
+00:01:52.309 --> 00:01:53.510
+to represent Workado.
+
+50
+00:01:53.589 --> 00:01:53.660
+So,
+
+51
+00:01:53.669 --> 00:01:55.510
+I'm just gonna draw a box here.
+
+52
+00:01:56.889 --> 00:02:01.830
+And then I'm just going to use the tool here to come up
+
+53
+00:02:02.290 --> 00:02:03.129
+with a suggestion.
+
+54
+00:02:03.290 --> 00:02:05.150
+So we're gonna type in data center.
+
+55
+00:02:11.440 --> 00:02:13.270
+And we're going to make that request
+
+56
+00:02:13.610 --> 00:02:15.270
+and it's going to start thinking about.
+
+57
+00:02:16.410 --> 00:02:18.949
+What image represents what I need,
+
+58
+00:02:19.250 --> 00:02:22.809
+and you'll notice that it's continuing to give these little circles at the bottom,
+
+59
+00:02:22.889 --> 00:02:26.389
+means it's thinking about other options that I might be interested in.
+
+60
+00:02:27.339 --> 00:02:29.190
+And then also there's different styles,
+
+61
+00:02:29.309 --> 00:02:31.529
+so I like the illustration style.
+
+62
+00:02:35.070 --> 00:02:37.710
+And I think this one is pretty good.
+
+63
+00:02:38.199 --> 00:02:38.789
+Let's see what else,
+
+64
+00:02:38.869 --> 00:02:39.119
+yeah.
+
+65
+00:02:39.429 --> 00:02:42.570
+So I'm going to go with this one here and I click on the check box.
+
+66
+00:02:43.449 --> 00:02:46.910
+And this is going to represent our work auto system.
+
+67
+00:02:47.339 --> 00:02:51.070
+And then what I'm going to do here is just remove
+
+68
+00:02:51.729 --> 00:02:53.820
+uh the background.
+
+69
+00:03:10.850 --> 00:03:12.880
+And what are we going to store in there?
+
+70
+00:03:12.929 --> 00:03:13.770
+As I mentioned earlier,
+
+71
+00:03:13.889 --> 00:03:15.309
+we're going to store.
+
+72
+00:03:16.160 --> 00:03:16.860
+A.
+
+73
+00:03:18.050 --> 00:03:18.990
+Data table
+
+74
+00:03:19.289 --> 00:03:20.130
+in Wikato,
+
+75
+00:03:20.169 --> 00:03:22.529
+which will represent the approval data,
+
+76
+00:03:22.570 --> 00:03:23.470
+the requests,
+
+77
+00:03:23.729 --> 00:03:26.110
+and then the response to that request.
+
+78
+00:03:27.020 --> 00:03:27.279
+So,
+
+79
+00:03:27.320 --> 00:03:28.949
+we'll just draw this box here.
+
+80
+00:03:29.229 --> 00:03:30.220
+Now it is thinking.
+
+81
+00:03:42.570 --> 00:03:44.000
+And I'll go with,
+
+82
+00:03:44.009 --> 00:03:44.429
+uh,
+
+83
+00:03:44.809 --> 00:03:45.990
+I'll go with this one here.
+
+84
+00:03:46.820 --> 00:03:47.649
+And
+
+85
+00:03:47.779 --> 00:03:49.600
+I'll go with illustration.
+
+86
+00:03:55.039 --> 00:03:56.550
+And I like that.
+
+87
+00:03:57.009 --> 00:03:57.169
+So,
+
+88
+00:03:57.289 --> 00:03:58.649
+click on there.
+
+89
+00:03:59.610 --> 00:04:02.149
+And I'm going to remove the background.
+
+90
+00:04:03.029 --> 00:04:03.039
+OK.
+
+91
+00:04:03.910 --> 00:04:07.050
+So this spreadsheet will represent the data
+
+92
+00:04:07.710 --> 00:04:08.589
+from Wakado.
+
+93
+00:04:09.520 --> 00:04:09.529
+And
+
+94
+00:04:09.759 --> 00:04:10.339
+we will make,
+
+95
+00:04:10.600 --> 00:04:11.139
+uh,
+
+96
+00:04:11.169 --> 00:04:12.720
+request in between here.
+
+97
+00:04:14.149 --> 00:04:14.309
+Right?
+
+98
+00:04:14.350 --> 00:04:15.639
+That's going to be stored
+
+99
+00:04:15.830 --> 00:04:16.619
+in Mercado
+
+100
+00:04:17.230 --> 00:04:20.428
+with the information about the request users made
+
+101
+00:04:20.428 --> 00:04:23.209
+and the information whether that request was approved
+
+102
+00:04:23.779 --> 00:04:24.350
+or denied.
+
+103
+00:04:27.119 --> 00:04:27.320
+Now,
+
+104
+00:04:27.399 --> 00:04:31.540
+the next thing I want to represent that we're going to be looking to build is
+
+105
+00:04:31.959 --> 00:04:33.220
+the user interface.
+
+106
+00:04:34.709 --> 00:04:35.790
+of a person.
+
+107
+00:04:39.950 --> 00:04:41.730
+And they're going to have a phone.
+
+108
+00:04:42.279 --> 00:04:43.269
+We'll go with that
+
+109
+00:04:43.440 --> 00:04:44.970
+and we'll check that.
+
+110
+00:04:46.510 --> 00:04:48.950
+And then I will remove the background.
+
+111
+00:04:50.549 --> 00:04:51.980
+Now that we have the user interface,
+
+112
+00:04:52.029 --> 00:04:53.130
+we're going to create an
+
+113
+00:04:53.670 --> 00:04:55.309
+app for iPhone
+
+114
+00:04:55.660 --> 00:04:58.329
+that will need to communicate with Workado,
+
+115
+00:04:58.790 --> 00:05:01.429
+and we will build 2 APIs in Workado.
+
+116
+00:05:02.220 --> 00:05:03.329
+The first one
+
+117
+00:05:06.100 --> 00:05:06.980
+is
+
+118
+00:05:08.350 --> 00:05:10.239
+The phone will make a request on.
+
+119
+00:05:11.359 --> 00:05:12.850
+What are the pending requests?
+
+120
+00:05:20.480 --> 00:05:22.429
+And after it makes the request,
+
+121
+00:05:22.890 --> 00:05:25.829
+Ricardo will return the data
+
+122
+00:05:26.410 --> 00:05:27.329
+to the
+
+123
+00:05:27.649 --> 00:05:28.119
+app.
+
+124
+00:05:40.410 --> 00:05:41.899
+And then we'll display that.
+
+125
+00:05:42.209 --> 00:05:45.149
+There'll be two APIs I'll be demonstrating that we will build
+
+126
+00:05:45.690 --> 00:05:47.369
+to just demonstrate this behavior.

@@ -1,0 +1,505 @@
+WEBVTT
+
+0
+00:00:00.079 --> 00:00:00.330
+Now,
+
+1
+00:00:00.409 --> 00:00:01.860
+we are back in Mercado,
+
+2
+00:00:02.240 --> 00:00:04.050
+and we're going to create the recipe.
+
+3
+00:00:04.909 --> 00:00:06.710
+For requesting the data.
+
+4
+00:00:09.680 --> 00:00:10.560
+Of
+
+5
+00:00:15.329 --> 00:00:16.489
+We're back in Ricato.
+
+6
+00:00:17.290 --> 00:00:17.569
+Now,
+
+7
+00:00:17.690 --> 00:00:19.670
+we saw the data table here.
+
+8
+00:00:20.010 --> 00:00:22.200
+Now we're going to take advantage of that data table.
+
+9
+00:00:22.290 --> 00:00:23.930
+We want to create the first API,
+
+10
+00:00:24.250 --> 00:00:25.969
+which is the pending requests.
+
+11
+00:00:26.129 --> 00:00:29.319
+We want to show the manager all the requests that are pending.
+
+12
+00:00:29.540 --> 00:00:30.579
+So we're going to get the data.
+
+13
+00:00:30.729 --> 00:00:32.630
+We'll fetch it from this data table.
+
+14
+00:00:33.619 --> 00:00:34.709
+So we're gonna create.
+
+15
+00:00:35.490 --> 00:00:36.759
+A recipe.
+
+16
+00:00:38.889 --> 00:00:40.189
+And it's going to be called
+
+17
+00:00:40.330 --> 00:00:41.049
+pending.
+
+18
+00:00:42.889 --> 00:00:44.110
+Requests
+
+19
+00:00:46.590 --> 00:00:48.409
+And we're going to build an
+
+20
+00:00:48.750 --> 00:00:50.369
+API endpoint
+
+21
+00:00:50.479 --> 00:00:51.630
+and start building.
+
+22
+00:00:55.830 --> 00:00:58.110
+And since this is a request,
+
+23
+00:00:58.150 --> 00:01:00.490
+we're going to send a response.
+
+24
+00:01:02.639 --> 00:01:02.860
+So,
+
+25
+00:01:02.869 --> 00:01:04.169
+we can go to the response.
+
+26
+00:01:05.949 --> 00:01:08.690
+And it's going to be standard response.
+
+27
+00:01:09.150 --> 00:01:11.250
+And here we can go ahead and select
+
+28
+00:01:11.669 --> 00:01:14.050
+the correct response back that we're going to give
+
+29
+00:01:14.470 --> 00:01:15.010
+when
+
+30
+00:01:15.470 --> 00:01:16.389
+the API is called.
+
+31
+00:01:16.510 --> 00:01:16.620
+So,
+
+32
+00:01:16.629 --> 00:01:18.370
+we'll just do the 200,
+
+33
+00:01:18.470 --> 00:01:19.910
+though you can do others.
+
+34
+00:01:19.989 --> 00:01:22.129
+You can add additional ones and you'll see this
+
+35
+00:01:22.709 --> 00:01:25.169
+in our third step where this shows up.
+
+36
+00:01:25.669 --> 00:01:26.220
+And now,
+
+37
+00:01:26.230 --> 00:01:26.510
+here,
+
+38
+00:01:26.550 --> 00:01:28.949
+we're going to use JSON.
+
+39
+00:01:30.199 --> 00:01:32.419
+And I have copied
+
+40
+00:01:32.819 --> 00:01:33.819
+onto the clipboard.
+
+41
+00:01:34.809 --> 00:01:36.389
+That request that we talked about
+
+42
+00:01:36.529 --> 00:01:37.230
+earlier.
+
+43
+00:01:37.610 --> 00:01:37.730
+So,
+
+44
+00:01:37.889 --> 00:01:38.080
+remember,
+
+45
+00:01:38.129 --> 00:01:39.230
+we need an array.
+
+46
+00:01:40.769 --> 00:01:45.260
+And the workcao tool will use this example.
+
+47
+00:01:47.230 --> 00:01:48.400
+And then we'll
+
+48
+00:01:48.790 --> 00:01:51.830
+generate the schema for us so we don't have to worry.
+
+49
+00:01:54.099 --> 00:01:57.260
+And I'll go ahead and save this data.
+
+50
+00:02:09.679 --> 00:02:10.199
+Now,
+
+51
+00:02:10.377 --> 00:02:12.029
+what we want to do,
+
+52
+00:02:12.039 --> 00:02:13.738
+because this is for pending,
+
+53
+00:02:14.119 --> 00:02:16.098
+we are going to take a look at
+
+54
+00:02:17.578 --> 00:02:20.098
+filtering the data from the data table.
+
+55
+00:02:20.369 --> 00:02:20.858
+So,
+
+56
+00:02:21.029 --> 00:02:22.419
+it's like data table.
+
+57
+00:02:24.009 --> 00:02:24.199
+So,
+
+58
+00:02:24.210 --> 00:02:27.130
+we're going to filter the Wikcado data,
+
+59
+00:02:27.250 --> 00:02:29.050
+so we need to search the records.
+
+60
+00:02:29.169 --> 00:02:29.250
+So,
+
+61
+00:02:29.279 --> 00:02:30.509
+we'll click on search.
+
+62
+00:02:32.210 --> 00:02:34.889
+And we need to select the correct data table.
+
+63
+00:02:35.050 --> 00:02:38.089
+So this is our computer request approval data
+
+64
+00:02:38.089 --> 00:02:39.949
+table that we're going to be searching.
+
+65
+00:02:40.410 --> 00:02:40.929
+And next,
+
+66
+00:02:40.970 --> 00:02:42.669
+we'll need to create a filter
+
+67
+00:02:43.250 --> 00:02:44.350
+to filter
+
+68
+00:02:44.610 --> 00:02:45.169
+which
+
+69
+00:02:45.369 --> 00:02:46.199
+items,
+
+70
+00:02:46.210 --> 00:02:48.429
+and we're going to filter the status.
+
+71
+00:02:51.649 --> 00:02:52.460
+And
+
+72
+00:02:52.660 --> 00:02:56.179
+the status equals what equals pending.
+
+73
+00:03:00.529 --> 00:03:02.789
+And then we can add a few more things here,
+
+74
+00:03:02.910 --> 00:03:06.490
+we'll just uh sort by the last modified time.
+
+75
+00:03:07.809 --> 00:03:09.039
+Descending,
+
+76
+00:03:09.580 --> 00:03:12.110
+and we're going to add one more field here,
+
+77
+00:03:12.380 --> 00:03:13.460
+just so that
+
+78
+00:03:13.820 --> 00:03:15.690
+the data gets displayed,
+
+79
+00:03:15.699 --> 00:03:16.059
+uh,
+
+80
+00:03:16.070 --> 00:03:17.199
+sent correctly.
+
+81
+00:03:18.699 --> 00:03:19.210
+Um
+
+82
+00:03:21.630 --> 00:03:23.490
+Here we're going to select.
+
+83
+00:03:26.509 --> 00:03:27.630
+Field name to value,
+
+84
+00:03:27.669 --> 00:03:29.789
+otherwise we get the hash values,
+
+85
+00:03:29.830 --> 00:03:31.029
+which is not what we want.
+
+86
+00:03:34.160 --> 00:03:34.369
+OK.
+
+87
+00:03:34.410 --> 00:03:35.970
+And then the last piece now.
+
+88
+00:03:36.089 --> 00:03:38.089
+So now that we've filtered the results,
+
+89
+00:03:38.130 --> 00:03:39.910
+we got all the pending data,
+
+90
+00:03:40.210 --> 00:03:42.910
+we haven't actually sent back the response
+
+91
+00:03:43.490 --> 00:03:43.990
+to
+
+92
+00:03:44.160 --> 00:03:44.880
+the API,
+
+93
+00:03:45.639 --> 00:03:46.869
+the API request.
+
+94
+00:03:47.490 --> 00:03:47.570
+So,
+
+95
+00:03:47.619 --> 00:03:47.800
+now,
+
+96
+00:03:47.809 --> 00:03:49.550
+let's do the 3rd step.
+
+97
+00:03:50.589 --> 00:03:52.070
+And add that.
+
+98
+00:03:52.330 --> 00:03:53.800
+So we're going to use the
+
+99
+00:03:53.940 --> 00:03:56.020
+API platform by Workato.
+
+100
+00:03:57.779 --> 00:04:00.399
+We're going to respond to an API request.
+
+101
+00:04:01.509 --> 00:04:02.279
+And here,
+
+102
+00:04:02.460 --> 00:04:05.179
+remember I mentioned that could be multiple responses.
+
+103
+00:04:05.410 --> 00:04:07.690
+We only configured the 200 response.
+
+104
+00:04:07.770 --> 00:04:08.990
+I'll click on OK.
+
+105
+00:04:10.490 --> 00:04:12.589
+And then it has all the fields.
+
+106
+00:04:12.770 --> 00:04:13.910
+Now I'm going to select all.
+
+107
+00:04:14.690 --> 00:04:17.510
+We can see here request is showing as
+
+108
+00:04:17.809 --> 00:04:19.510
+the icon as an array,
+
+109
+00:04:19.690 --> 00:04:20.649
+which is what we wanted.
+
+110
+00:04:20.890 --> 00:04:21.010
+So,
+
+111
+00:04:21.100 --> 00:04:23.709
+I'll select all and apply the changes.
+
+112
+00:04:29.380 --> 00:04:33.480
+And now we're going to select the list here.
+
+113
+00:04:35.239 --> 00:04:37.640
+And we're going to go to records
+
+114
+00:04:38.190 --> 00:04:39.940
+and we'll fill in the rest.
+
+115
+00:04:40.769 --> 00:04:42.670
+The data table here very simply.
+
+116
+00:04:53.670 --> 00:04:56.880
+And now we can click on the save button on the top here.
+
+117
+00:05:01.950 --> 00:05:04.660
+And that will uh complete.
+
+118
+00:05:06.049 --> 00:05:06.910
+The recipe
+
+119
+00:05:07.690 --> 00:05:08.890
+that we needed.
+
+120
+00:05:09.089 --> 00:05:09.209
+Now,
+
+121
+00:05:09.290 --> 00:05:10.510
+there's more things
+
+122
+00:05:10.809 --> 00:05:11.529
+that need to be completed,
+
+123
+00:05:11.570 --> 00:05:13.429
+but let's just go back here to the project.
+
+124
+00:05:13.809 --> 00:05:14.869
+We have our data table
+
+125
+00:05:15.029 --> 00:05:18.010
+and we have created the API pending request.
